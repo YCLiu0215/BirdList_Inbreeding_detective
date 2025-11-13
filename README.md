@@ -20,16 +20,16 @@ Step 5: run the code and enjoy the results
 **Message explanation**
 
 
-INBREEDER ALERT: The bird under investigation has inbreeding history. The return list of birds are those contributed to its inbreeding history.
+"INBREEDER ALERT": The bird under investigation has inbreeding history. The return list of birds are those contributed to its inbreeding history.
 
 
-*** cannot be found in bird list: Bird *** in the family tree of the bird under investigation has no information in the bird list. It might be due to lack of information or Bird ID format issues.
+"BirdID cannot be found in bird list": This bird in the family tree of the bird under investigation has no information in the bird list. It might be due to lack of information or Bird ID format issues.
 
 
-Kin relationship not found: There is no overlap between the family trees of the two birds under investigation.
+"Kin relationship not found": There is no overlap between the family trees of the two birds under investigation.
 
 
-Inbreeding possibility detected!!: There is a possibility of inbreeding if you pair these two birds. The following messages listed all the birds in the family tree that are overlapped between the investigated pair. P1 means their parents, P2 means their grand parents, and so on.
+"Inbreeding possibility detected!!": There is a possibility of inbreeding if you pair these two birds. The following messages listed all the birds in the family tree that are overlapped between the investigated pair. P1 means their parents, P2 means their grand parents, and so on.
 
 
 
