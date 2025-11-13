@@ -75,7 +75,7 @@ def family_all(seeds):
         generation += (1 if n[generation-1] == 0 else 0)
     unique_elements, counts = np.unique(np.array(family_list),return_counts=True)
     if any(counts>1):
-        print('INBREEDING ALERT ('+Subject+'):')
+        print('INBREEDER ALERT ('+Subject+'):')
         print(unique_elements[counts > 1])
     else:
         pass
@@ -108,3 +108,4 @@ else:
         for P, pb in FT_female.items():
             if kin in pb:
                 print('\t'+P+': '+kin+'')
+
