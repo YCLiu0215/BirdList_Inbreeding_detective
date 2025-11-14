@@ -44,8 +44,8 @@ def DadMom(seed):
 #function of getting all family information from a bird
 def family_all(seeds):
     Subject = seeds[0]
-    family = {}
-    family_list = []
+    family = {'F0':[Subject]}
+    family_list = [Subject]
     generation = 1
     n = [1]
     while seeds != []:
@@ -108,4 +108,5 @@ else:
         for P, pb in FT_female.items():
             if kin in pb:
                 print('\t'+P+': '+kin+'')
+
 
