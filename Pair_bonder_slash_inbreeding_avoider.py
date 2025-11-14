@@ -21,13 +21,22 @@ bl = pd.read_excel('Bird_List_new ver_2.xlsx')
 
 #Function for the bird list search
 def DadMom(seed):
-    if all(bl['Bird ID'].str.contains(seed, case=False, na=False)==False):
+    if all(bl['Bird ID'].str.contains(seed, case=False, na=False, regex=False)==False):
         matches = bl['Bird ID'][bl['Bird ID'].astype(str).apply(lambda x: x in seed)]
         if len(matches) == 0:
             print(seed+' cannot be found in bird list')
             return [np.nan,np.nan]
-        else:
+        elif len(matches) == 1:
             seed = matches.iloc[0]
+            Parents = [bl.loc[bl['Bird ID'].str.contains(seed, case=False, na=False),'father'].iloc[0],bl.loc[bl['Bird ID'].str.contains(seed, case=False, na=False),'mother'].iloc[0]]
+            if type(Parents[0])==str:
+                return Parents
+            else:
+                return [np.nan,np.nan]
+        else:
+            print('Multiple targets found for ['+seed+']:')
+            print(matches)
+            seed = input("Which bird are you looking for:")
             Parents = [bl.loc[bl['Bird ID'].str.contains(seed, case=False, na=False),'father'].iloc[0],bl.loc[bl['Bird ID'].str.contains(seed, case=False, na=False),'mother'].iloc[0]]
             if type(Parents[0])==str:
                 return Parents
@@ -108,5 +117,6 @@ else:
         for P, pb in FT_female.items():
             if kin in pb:
                 print('\t'+P+': '+kin+'')
+
 
 
